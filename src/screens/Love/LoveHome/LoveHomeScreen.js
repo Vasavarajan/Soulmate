@@ -17,7 +17,6 @@ import {useNetInfo} from '@react-native-community/netinfo';
 import ErrorModal from '../../../components/Modals/ErrorModal';
 
 import {API_KEY, BASE_URL, API_HOST} from '@env';
-// ApiClient.init(API_KEY, BASE_URL, API_HOST);
 function LoveHomeScreen(props) {
   const [yourName, setYourName] = useState('');
   const [partnerName, setPartnerName] = useState('');
