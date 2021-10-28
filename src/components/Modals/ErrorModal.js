@@ -81,7 +81,8 @@ const styles = StyleSheet.create({
   },
   titleText: {
     fontSize: height <= 540 ? 19 : height <= 750 ? 23 : 25,
-    fontFamily: 'Courgette',
+    fontFamily: 'AndikaNewBasic-Italic',
+    color: Color.ButtonRipple,
   },
   msg: {
     width: '100%',
