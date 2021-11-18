@@ -4,12 +4,17 @@ const {height} = Dimensions.get('window');
 
 export default StyleSheet.create({
   container: {
-    // flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    // backgroundColor: Color.containerBg,
+    flex: 1,
   },
-  header: {
+  result: {
+    paddingVertical: 20,
+    marginHorizontal: 15,
+    flexDirection: 'row',
+  },
+  name: {
+    justifyContent: 'flex-start',
+  },
+  percentage: {
     fontFamily: 'AndikaNewBasic-Italic',
     fontSize: 25,
   },

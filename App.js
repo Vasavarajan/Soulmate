@@ -15,7 +15,7 @@ export default function App() {
 
   return (
     <NavigationContainer>
-      <LoveStack.Navigator initialRouteName="Home">
+      <LoveStack.Navigator initialRouteName="LoveHome">
         <LoveStack.Screen
           name="LoveHome"
           component={LoveHomeScreen}

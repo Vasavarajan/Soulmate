@@ -1,16 +1,30 @@
+// export default Color = {
+//   containerBg: '#240046',
+//   Title: '#e0aaff',
+//   TextBackGround: '#e0aaff',
+//   // TextBackGround: '#00BBF0',
+//   TextBorder: '#10002b',
+//   // TextInputPh: '#F9F3EF',
+//   TextInput: '#10002b',
+//   ButtonRipple: '#FF8686',
+//   PcCenter: '#FFFFFF',
+//   PcDia: '#FF0000',
+//   PcDiaBg: '#FF9F9F',
+//   Button: '#e0aaff',
+// };
 export default Color = {
-  containerBg: '#240046',
-  Title: '#e0aaff',
-  TextBackGround: '#e0aaff',
+  containerBg: '#2A2438',
+  Title: '#FFF',
+  TextBackGround: '#DBD8E3',
   // TextBackGround: '#00BBF0',
-  TextBorder: '#10002b',
+  TextBorder: '#DBD8E3',
   // TextInputPh: '#F9F3EF',
-  TextInput: '#10002b',
+  TextInput: '#352F44',
   ButtonRipple: '#FF8686',
   PcCenter: '#FFFFFF',
   PcDia: '#FF0000',
   PcDiaBg: '#FF9F9F',
-  Button: '#e0aaff',
+  Button: '#FFF',
 };
 
 // export default Color = {

@@ -9,27 +9,40 @@ import {
 } from 'react-native';
 import LottieView from 'lottie-react-native';
 import Color from '../../utils/Colors';
+import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 
 const {height} = Dimensions.get('window');
 
 const ErrorModal = props => {
   return (
     <Modal
-      animationType="fade"
+      animationType="slide"
       visible={props.visible}
       transparent={true}
       onRequestClose={props.onRequestClose}>
       <View style={styles.container}>
         <View style={styles.innerView}>
+          <View style={styles.buttonView}>
+            <Pressable onPress={props.onPress} style={styles.button}>
+              <MaterialCommunityIcons
+                name="close-circle-outline"
+                size={50}
+                color="#fff"
+              />
+            </Pressable>
+          </View>
           <View
             style={{
-              width: '100%',
+              width: '50%',
+              height: '50%',
+
               justifyContent: 'center',
               alignItems: 'center',
             }}>
             <LottieView
               style={{
-                width: '50%',
+                width: '100%',
+                height: '100%',
               }}
               source={props.source}
               autoPlay
@@ -42,16 +55,6 @@ const ErrorModal = props => {
           <View style={styles.msg}>
             <Text style={styles.msgText}>{props.message}</Text>
           </View>
-          <View style={styles.buttonView}>
-            <Pressable
-              onPress={props.onPress}
-              android_ripple={{
-                color: Color.ButtonRipple,
-              }}
-              style={styles.button}>
-              <Text style={styles.buttonText}>Ok</Text>
-            </Pressable>
-          </View>
         </View>
       </View>
     </Modal>
@@ -60,18 +63,23 @@ const ErrorModal = props => {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
+    // flex: 1,
+    justifyContent: 'flex-end',
+    // position: 'absolute',
+    // bottom: 0,
+    // right: 0,
+    width: '100%',
+    height: '100%',
+    // alignItems: 'center',
   },
   innerView: {
-    width: height <= 540 ? '80%' : height <= 750 ? '75%' : '70%',
-    height: height <= 540 ? '55%' : height <= 750 ? '45%' : '40%',
-    backgroundColor: Color.containerBg,
-    borderRadius: 25,
+    width: '100%',
+    height: height < 540 ? '55%' : '50%',
+    backgroundColor: '#000',
     overflow: 'hidden',
     alignItems: 'center',
-    elevation: 10,
+    borderTopRightRadius: 35,
+    borderTopLeftRadius: 35,
   },
   title: {
     width: '100%',
@@ -81,41 +89,36 @@ const styles = StyleSheet.create({
   },
   titleText: {
     fontSize: height <= 540 ? 19 : height <= 750 ? 23 : 25,
-    fontFamily: 'AndikaNewBasic-Italic',
-    color: Color.ButtonRipple,
+    fontFamily: 'Zingakon',
+    letterSpacing: 10,
+    color: '#00BBF0',
   },
   msg: {
     width: '100%',
-    paddingVertical: height <= 540 ? 10 : height <= 750 ? 15 : 20,
+    paddingVertical: height <= 540 ? 5 : height <= 750 ? 10 : 15,
     justifyContent: 'center',
     alignItems: 'center',
   },
   msgText: {
-    fontSize: height <= 540 ? 14 : height <= 750 ? 16 : 18,
-    paddingHorizontal: height <= 540 ? 25 : height <= 750 ? 30 : 35,
-    fontFamily: 'Courgette',
+    fontSize: height <= 540 ? 14 : height <= 750 ? 20 : 18,
+    paddingHorizontal: height <= 540 ? 15 : height <= 750 ? 20 : 25,
+    fontFamily: 'FomoSans-Regular',
     textAlign: 'center',
+    color: '#DBD8E3',
+    letterSpacing: 4,
+    lineHeight: 30,
   },
   buttonView: {
-    width: '30%',
-    height: height <= 540 ? 33 : height <= 750 ? 36 : 40,
-    justifyContent: 'center',
-    alignItems: 'center',
-    borderRadius: 50,
-    overflow: 'hidden',
+    position: 'absolute',
+    // backgroundColor: '#000',
+    right: 15,
+    top: 15,
+    height: 50,
   },
   button: {
     width: '100%',
     height: '100%',
-    justifyContent: 'center',
-    backgroundColor: Color.Main,
-
     alignItems: 'center',
-  },
-  buttonText: {
-    color: Color.TextInput,
-    fontFamily: 'Courgette',
-    fontSize: height <= 540 ? 14 : height <= 750 ? 16 : 18,
   },
 });
 
