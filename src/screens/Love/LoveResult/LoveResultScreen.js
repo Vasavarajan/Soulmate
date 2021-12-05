@@ -8,6 +8,7 @@ import QuoteData from '../../../utils/Quote';
 const {height} = Dimensions.get('window');
 
 function LoveResultScreen(props) {
+  
   const {fname, percentage, sname} = props.route.params;
   // const viewShotRef = useRef();
 

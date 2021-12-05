@@ -9,10 +9,12 @@ export default StyleSheet.create({
   result: {
     paddingVertical: 20,
     marginHorizontal: 15,
-    flexDirection: 'row',
   },
   name: {
-    justifyContent: 'flex-start',
+    color: '#fff',
+    fontSize: 50,
+    fontFamily: 'Tahu!',
+    letterSpacing: 5,
   },
   percentage: {
     fontFamily: 'AndikaNewBasic-Italic',
